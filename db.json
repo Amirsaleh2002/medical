@@ -1,0 +1,16 @@
+{
+  "registereduser": [
+    {
+      "id": "6678",
+      "firstName": "امیرصالح ",
+      "lastName": "رضایی بیناباج",
+      "password": "saleh.1381",
+      "ConfirmPassword": "saleh.1381",
+      "email": "amsaleh.r81@gmail.com",
+      "desc": ""
+    }
+  ],
+  "patients": [],
+  "doctors": [],
+  "drugs": []
+}

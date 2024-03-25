@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  direction: rtl;
+}
+@font-face {
+  font-family: klm;
+  src: url("../public/fonts/KalamehWebFaNum-Regular.woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: klm;
+  src: url("../public/fonts/KalamehWebFaNum-Thin.woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: klm;
+  src: url("../public/fonts/KalamehWebFaNum-Bold.woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: klm;
+  src: url("../public/fonts/KalamehWebFaNum-Black.woff2");
+  font-weight: 900;
+}
+* {
+  font-family: klm;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+}
