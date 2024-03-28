@@ -93,9 +93,9 @@ function DoctorsList() {
             <DoctorInfo />
             <DoctorInfo />
           </div>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   );

@@ -75,9 +75,9 @@ function Articles() {
             <ArticleInfo />
             <ArticleInfo />
           </div>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   )

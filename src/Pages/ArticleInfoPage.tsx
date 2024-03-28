@@ -75,9 +75,9 @@ function ArticleInfoPage() {
             consectetur, quae molestiae fuga nesciunt amet? Omnis repellat
             consequuntur cupiditate iste.
           </p>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   );

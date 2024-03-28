@@ -81,9 +81,9 @@ function DrugInfoPage() {
 
           <div className="flex flex-col justify-center my-10 gap-4">
           </div>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   )

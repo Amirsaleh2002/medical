@@ -102,9 +102,9 @@ function DoctorInfoPage() {
             <span>شماره تلفن : 32259632 - 051</span>
             <span>آدرس مطب  : مشهد - بولوار وکیل آباد - وکیل آباد 46 - پلاک 90</span>
           </div>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   );

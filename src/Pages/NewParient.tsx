@@ -226,9 +226,9 @@ function NewParient() {
           >
             ثبت اطلاعات
           </button>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   );

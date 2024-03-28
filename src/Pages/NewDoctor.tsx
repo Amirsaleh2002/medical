@@ -158,9 +158,9 @@ function NewDoctor() {
           >
             ثبت اطلاعات
           </button>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   );

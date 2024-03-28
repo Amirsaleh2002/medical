@@ -121,8 +121,8 @@ function HomePage() {
             <ArticleInfo />
             <ArticleInfo />
           </div>
-          <Footer />
         </div>
+          <Footer />
       </div>
     </>
   );

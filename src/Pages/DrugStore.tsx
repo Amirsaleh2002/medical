@@ -73,9 +73,9 @@ function DrugStore() {
             <DrugBox />
             <DrugBox />
           </div>
-          <Footer />
 
         </div>
+          <Footer />
       </div>
     </>
   );
