@@ -87,7 +87,7 @@ function Sidebar() {
           </Link>
           <Link
             to="/drug-store"
-            className="text-base items-center p-1 flex gap-1  font-bold transition-all "
+            className="text-xs md:text-base items-center w-full border-b p-1 rounded-md flex gap-1 hover:bg-slate-100 hover:text-yellow-500 font-bold transition-all text-slate-50 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
