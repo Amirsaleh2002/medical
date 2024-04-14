@@ -1,19 +1,39 @@
 // import React from 'react'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { getPatientsFromServer } from "../Redux/store/newpatients";
+import { ThunkDispatch } from "redux-thunk";
+// import { AnyAction } from "redux";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { Patients } from "../Components/srcTs/tsTypes/Patients.type";
+
+// import type { RootState, AppDispatch } from '../Redux/store'
 
 function TurnRating() {
   const [sidebarStatus, setSidebarStatus] = useState<boolean>(false);
+  const [patients, setPatients] = useState<Patients[]>([]);
+
+
+  const dispatch = useDispatch<ThunkDispatch<any, any, PayloadAction>>();
+
+  useEffect(() => {
+    const allPatients =  dispatch(getPatientsFromServer("http://localhost:4000/patients"))
+    allPatients.then(res => setPatients(res.payload))
+    
+  }, []);
 
   return (
     <>
       <div
         className={`bg-green-950 absolute ${
-          sidebarStatus === true ? "transition-[3s] right-0 z-10 top-0 bottom-0" : "-right-80 transition-[3s]"
+          sidebarStatus === true
+            ? "transition-[3s] right-0 z-10 top-0 bottom-0"
+            : "-right-80 transition-[3s]"
         }`}
       >
         <Sidebar />
@@ -95,19 +115,21 @@ function TurnRating() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="text-right border-b py-2 ">
-                  <td className="py-2 px-1">1</td>
-                  <td>
-                    <h2 className="font-bold text-sm">غلامرضا فیضی</h2>
-                  </td>
-                  <td>6987***0915</td>
-                  <td>25</td>
-                  <td>زن</td>
-                  <td>داخلی</td>
-                  <td>31 فروردین 1403</td>
-                  <td>18:00</td>
-                  <td>حسین هژبرالساداتی</td>
-                </tr>
+                {patients?.map((item, index) => (
+                  <tr key={item.id} className="text-right border-b py-2 ">
+                    <td className="py-2 px-1">{index + 1}</td>
+                    <td>
+                      <h2 className="font-bold text-sm">{item.name}</h2>
+                    </td>
+                    <td>{item.phoneNumber}</td>
+                    <td>{item.age}</td>
+                    <td>{item.sex === "male" ? "مرد" : "زن"}</td>
+                    <td>{item.department}</td>
+                    <td>31 فروردین 1403</td>
+                    <td>18:00</td>
+                    <td>{item.doctor}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

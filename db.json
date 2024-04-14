@@ -46,7 +46,9 @@
       "desc": ""
     }
   ],
-  "patients": [],
+  "patients": [
+    {"id" : 1 , "name" : "صالح" , "age" : 30 , "sex" : "male" , "phoneNumber" : "09159563214" , "department" : "داخلی" , "doctor" : "اقای هژبر"}
+  ],
   "doctors": [],
   "drugs": []
 }
