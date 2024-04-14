@@ -15,8 +15,8 @@ function HomePage() {
   return (
     <>
       <div
-        className={`bg-green-950 absolute transition ${
-          sidebarStatus === true ? "right-0 z-10 top-0 bottom-0" : "-right-80"
+        className={`bg-green-950 absolute ${
+          sidebarStatus === true ? "transition-[3s] right-0 z-10 top-0 bottom-0" : "-right-80 transition-[3s]"
         }`}
       >
         <Sidebar />

@@ -4,7 +4,7 @@ function Sidebar() {
   return (
     <>
       <div className="w-full">
-        <ul className="flex flex-col h-screen md:p-1 pt-8 gap-y-6 w-full">
+        <ul className="flex flex-col h-screen px-2 pt-8 gap-y-6 w-full">
           <Link
             to="/"
             className="text-xs md:text-base w-full border-b p-1 rounded-md flex gap-1 items-center hover:bg-slate-100 hover:text-yellow-500 font-bold transition-all text-slate-50"
