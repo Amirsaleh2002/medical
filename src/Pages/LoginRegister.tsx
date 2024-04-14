@@ -6,8 +6,8 @@ import {
   PersonRegister,
 } from "../Components/srcTs/Validation/validate";
 import { Errors } from "../Components/srcTs/tsTypes/Errors.type";
-import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function LoginRegister() {
   const [isRegister, setIsRegister] = useState<boolean>(false);
@@ -28,7 +28,7 @@ function LoginRegister() {
   const [registerErrors, setRegisterErrors] = useState<Errors>({});
   const [logInErrors, setLogInErrors] = useState<Errors>({});
 
-  let navigator = useNavigate()
+  let navigator = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:4000/registereduser")
@@ -57,21 +57,18 @@ function LoginRegister() {
         abortEarly: false,
       });
       if (isUserIsInSite && isValid) {
-        swal({
+        Swal.fire({
           title: "ورود شما با موفقیت انجام شد",
           icon: "success",
-          button: "باشه",
-        })
-        .then(result => {
+        }).then((result) => {
           if (result) {
-            navigator('/')
+            navigator("/");
           }
-        })
-      }else{
-        swal({
+        });
+      } else {
+        Swal.fire({
           title: "نام کاربری یا رمز عبور اشتباه است",
           icon: "error",
-          button: "امتحان دوباره",
         });
       }
     } catch (err: any) {
@@ -113,17 +110,19 @@ function LoginRegister() {
           body: JSON.stringify(userRegister),
         });
         if (res.ok) {
-          swal({
+          Swal.fire({
             title: "ثبت نام با موفقیت انجام شد",
             icon: "success",
-            button: "باشه",
+          }).then((result) => {
+            if (result) {
+              navigator("/");
+            }
           });
         }
       } else {
-        swal({
+        Swal.fire({
           title: "مشکلی در فرآیند ثبت نام رخ داد",
           icon: "error",
-          button: "امتحان دوباره",
         });
       }
     } catch (err: any) {
