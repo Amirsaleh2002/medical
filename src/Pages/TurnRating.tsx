@@ -5,26 +5,20 @@ import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
-import { useDispatch, useSelector } from "react-redux";
 import { getPatientsFromServer } from "../Redux/store/newpatients";
-import { ThunkDispatch } from "redux-thunk";
-// import { AnyAction } from "redux";
-import type { PayloadAction } from "@reduxjs/toolkit";
 import { Patients } from "../Components/srcTs/tsTypes/Patients.type";
 
-// import type { RootState, AppDispatch } from '../Redux/store'
+import { useAppDispatch, useAppSelector } from "../Redux/store";
 
 function TurnRating() {
   const [sidebarStatus, setSidebarStatus] = useState<boolean>(false);
   const [patients, setPatients] = useState<Patients[]>([]);
 
+  const dispatch = useAppDispatch();
 
-  const dispatch = useDispatch<ThunkDispatch<any, any, PayloadAction>>();
-
-  useEffect(() => {
-    const allPatients =  dispatch(getPatientsFromServer("http://localhost:4000/patients"))
-    allPatients.then(res => setPatients(res.payload))
-    
+  useEffect(() => {    
+    const patientLoaded = dispatch(getPatientsFromServer("http://localhost:4000/patients"));
+    console.log(patientLoaded.then((data) => setPatients(data.payload)));
   }, []);
 
   return (

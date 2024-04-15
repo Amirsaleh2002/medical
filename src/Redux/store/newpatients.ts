@@ -12,18 +12,9 @@ export const getPatientsFromServer = createAsyncThunk(
   }
 );
 
-
-interface CounterState {
-  value: [];
-}
-
-const initialState: CounterState = {
-  value: [],
-};
-
 export const counterSlice = createSlice({
   name: "patients",
-  initialState,
+  initialState: [],
   reducers: {
     //     incrementByAmount: (state, action: PayloadAction<number>) => {
     //       state.value += action.payload;
