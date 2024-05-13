@@ -141,17 +141,11 @@ function NewDoctor() {
 
               <span className="text-red-400"></span>
             </div>
+          </div>
             <div className="mb-4 p-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="emailInput"
-              >
-                عکس خود را بارگزاری کنید
-              </label>
               <input type="file" />
               <span className="text-red-400"></span>
             </div>
-          </div>
           <button
             className="font-bold py-2 mt-6 bg-blue-600 text-white rounded-md px-4"
             type="button"

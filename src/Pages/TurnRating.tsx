@@ -1,6 +1,6 @@
 // import React from 'react'
 
-import { useState} from "react";
+import { useState } from "react";
 import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
@@ -12,7 +12,38 @@ import { Patients } from "../Components/srcTs/tsTypes/Patients.type";
 
 function TurnRating() {
   const [sidebarStatus, setSidebarStatus] = useState<boolean>(false);
-  const [patients, setPatients] = useState<Patients[]>([
+  // const [patients, setPatients] = useState<Patients[]>([
+  //   {
+  //     id: "1",
+  //     name: "صالح",
+  //     age: 30,
+  //     sex: "male",
+  //     phoneNumber: "09159563214",
+  //     department: "داخلی",
+  //     doctor: "اقای هژبر",
+  //   },
+  //   {
+  //     id: "2",
+  //     name: "صادق",
+  //     age: 45,
+  //     sex: "male",
+  //     phoneNumber: "09369853214",
+  //     department: "پوست",
+  //     doctor: "اقای نیازی",
+  //   },
+  // ]);
+
+  // setPatients([{
+  //   id: "3",
+  //   name: "میترا",
+  //   age: 14,
+  //   sex: "female",
+  //   phoneNumber: "09907896325",
+  //   department: "عمومی",
+  //   doctor: "خانم میرغلمی",
+  // },])
+
+  let patients: Patients[] = [
     {
       id: "1",
       name: "صالح",
@@ -31,8 +62,7 @@ function TurnRating() {
       department: "پوست",
       doctor: "اقای نیازی",
     },
-  ]);
-
+  ];
   // const dispatch = useAppDispatch();
 
   // useEffect(() => {
