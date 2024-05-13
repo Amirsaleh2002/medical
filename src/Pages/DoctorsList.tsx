@@ -71,10 +71,10 @@ function DoctorsList() {
             </div>
           </form>
           <div className="h-12 w-68 min-w-[200px] my-10">
-            <select className="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 text-sm font-normal text-blue-gray-700 outline outline-0 transition-allempty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
-              <option value="-1">نمایش بر اساس : </option>
-              <option value="1">متخصص</option>
-              <option value="2">عمومی</option>
+            <select className="cursor-pointer peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-6 py-2.5 text-sm font-normal text-blue-gray-700 outline outline-0 transition-allempty:!bg-gray-900 focus:border-2 focus:border-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+              <option value="-1" className="cursor-pointer">نمایش بر اساس : </option>
+              <option value="1" className="cursor-pointer">متخصص</option>
+              <option value="2" className="cursor-pointer">عمومی</option>
             </select>
           </div>
           <div className="flex justify-between items-center my-6">

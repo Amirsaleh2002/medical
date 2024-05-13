@@ -12,7 +12,9 @@ function DoctorInfoPage() {
     <>
       <div
         className={`bg-green-950 absolute ${
-          sidebarStatus === true ? "transition-[3s] right-0 z-10 top-0 bottom-0" : "-right-80 transition-[3s]"
+          sidebarStatus === true
+            ? "transition-[3s] right-0 z-10 top-0 bottom-0"
+            : "-right-80 transition-[3s]"
         }`}
       >
         <Sidebar />
@@ -22,8 +24,9 @@ function DoctorInfoPage() {
         className={`col-span-12 w-full ${
           sidebarStatus === true ? "bg-slate-200 opacity-60" : ""
         }`}
-        onClick={() => 
-          sidebarStatus === true ? setSidebarStatus(false) : false}
+        onClick={() =>
+          sidebarStatus === true ? setSidebarStatus(false) : false
+        }
       >
         {!sidebarStatus && (
           <button
@@ -51,43 +54,32 @@ function DoctorInfoPage() {
         <Header />
 
         <div className="mt-10 mx-auto w-[85%]">
-        <form className="md:w-[400px] my-4">
-          <div className="relative">
-            <input
-              type="search"
-              id="default-search"
-              className="block w-full p-4 ps-10 text-sm border border-gray-300 rounded-lg focus:outline-none"
-              placeholder="دنبال چی هستی؟؟"
-              required
-            />
-            <button
-              type="submit"
-              className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Search
-            </button>
-          </div>
-        </form>
-          <div className="flex justify-between">
-            <h1 className="text-base">
+          <form className="md:w-[400px] my-4">
+            <div className="relative">
+              <input
+                type="search"
+                id="default-search"
+                className="block w-full p-4 ps-10 text-sm border border-gray-300 rounded-lg focus:outline-none"
+                placeholder="دنبال چی هستی؟؟"
+                required
+              />
+              <button
+                type="submit"
+                className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+          <div>
+            <h1 className="text-base my-5">
               دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران  
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران  
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران
-              دکتر رضا اصغری اعرابی متخصص اطفال فارغ التحصیل دانشگاه بهشتی تهران  
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد
             </h1>
             <img
               src="/images/download (4).jpg"
@@ -100,11 +92,12 @@ function DoctorInfoPage() {
             <span>ساعت کاری : 12 الی 18</span>
             <span>ایمیل : doctor@gmail.com</span>
             <span>شماره تلفن : 32259632 - 051</span>
-            <span>آدرس مطب  : مشهد - بولوار وکیل آباد - وکیل آباد 46 - پلاک 90</span>
+            <span>
+              آدرس مطب : مشهد - بولوار وکیل آباد - وکیل آباد 46 - پلاک 90
+            </span>
           </div>
-
         </div>
-          <Footer />
+        <Footer />
       </div>
     </>
   );

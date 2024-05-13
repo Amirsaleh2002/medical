@@ -1,25 +1,46 @@
 // import React from 'react'
 
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
-import { getPatientsFromServer } from "../Redux/store/newpatients";
+// import { getPatientsFromServer } from "../Redux/store/newpatients";
 import { Patients } from "../Components/srcTs/tsTypes/Patients.type";
 
-import { useAppDispatch, useAppSelector } from "../Redux/store";
+// import { useAppDispatch, useAppSelector } from "../Redux/store";
 
 function TurnRating() {
   const [sidebarStatus, setSidebarStatus] = useState<boolean>(false);
-  const [patients, setPatients] = useState<Patients[]>([]);
+  const [patients, setPatients] = useState<Patients[]>([
+    {
+      id: "1",
+      name: "صالح",
+      age: 30,
+      sex: "male",
+      phoneNumber: "09159563214",
+      department: "داخلی",
+      doctor: "اقای هژبر",
+    },
+    {
+      id: "2",
+      name: "صادق",
+      age: 45,
+      sex: "male",
+      phoneNumber: "09369853214",
+      department: "پوست",
+      doctor: "اقای نیازی",
+    },
+  ]);
 
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  useEffect(() => {    
-    const patientLoaded = dispatch(getPatientsFromServer("http://localhost:4000/patients"));
-    console.log(patientLoaded.then((data) => setPatients(data.payload)));
-  }, []);
+  // useEffect(() => {
+  //   const patientLoaded = dispatch(
+  //     getPatientsFromServer("http://localhost:4000/patients")
+  //   );
+  //   console.log(patientLoaded.then((data) => setPatients(data.payload)));
+  // }, []);
 
   return (
     <>
